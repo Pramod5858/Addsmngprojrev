@@ -46,7 +46,7 @@ app.listen(port, BASE_URL, () => {
 })
 
 mongoose.set("strictQuery", false);
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect(DATABASE, {
     UseNewUrlParser: true, UseUnifiedTopology: true
 }).then(data=>{
     console.log("DB has been connected");
