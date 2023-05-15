@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+BASE_URL = http://localhost:5500
 const cors = require('cors');
 const BASE_URL = process.env.BASE_URL;
 
@@ -9,7 +10,7 @@ const routes = require('./Routes/index');
 const { response, request } = require('express');
 
 const port = process.env.PORT || 5500;
-const hostname = 'localhost';
+//const hostname = 'localhost';
 const DATABASE = 'mongodb+srv://user_12:GjKd5OpYeJWi3oEr@cluster0.fakhrz8.mongodb.net/testing1?retryWrites=true&w=majority';
 
 /* 
@@ -44,7 +45,8 @@ app.listen(port, BASE_URL, () => {
     console.log(`Connection Succesfully to ${BASE_URL}:${port}`)
 })
 
-mongoose.connect(DATABASE, {
+mongoose.set("strictQuery", false);
+mongoose.connect(process.env.DATABASE, {
     UseNewUrlParser: true, UseUnifiedTopology: true
 }).then(data=>{
     console.log("DB has been connected");
