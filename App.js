@@ -40,8 +40,8 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use('/', routes);
 
-app.listen(port, hostname, () => {
-    console.log(`Connection Succesfully to ${hostname}:${port}`)
+app.listen(port, BASE_URL, () => {
+    console.log(`Connection Succesfully to ${BASE_URL}:${port}`)
 })
 
 mongoose.connect(DATABASE, {
