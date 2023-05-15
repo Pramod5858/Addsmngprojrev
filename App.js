@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const BASE_URL = process.env.BASE_URL;
 
+require("dotenv").config();
+
 
 const routes = require('./Routes/index');
 const { response, request } = require('express');
