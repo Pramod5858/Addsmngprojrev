@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-BASE_URL = http://localhost:5500
+const BASE_URL = http://localhost:5500
 const cors = require('cors');
 const BASE_URL = process.env.BASE_URL;
 
