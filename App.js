@@ -10,7 +10,7 @@ const { response, request } = require('express');
 
 const port = process.env.PORT || 5500;
 const hostname = 'localhost';
-const AtlasDbUrl = 'mongodb+srv://user_12:GjKd5OpYeJWi3oEr@cluster0.fakhrz8.mongodb.net/testing1?retryWrites=true&w=majority';
+const DATABASE = 'mongodb+srv://user_12:GjKd5OpYeJWi3oEr@cluster0.fakhrz8.mongodb.net/testing1?retryWrites=true&w=majority';
 
 /* 
 Database :- testing1 
@@ -44,7 +44,7 @@ app.listen(port, hostname, () => {
     console.log(`Connection Succesfully to ${hostname}:${port}`)
 })
 
-mongoose.connect(AtlasDbUrl, {
+mongoose.connect(DATABASE, {
     UseNewUrlParser: true, UseUnifiedTopology: true
 }).then(data=>{
     console.log("DB has been connected");
