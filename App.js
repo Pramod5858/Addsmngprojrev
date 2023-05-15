@@ -8,7 +8,7 @@ const BASE_URL = process.env.BASE_URL;
 const routes = require('./Routes/index');
 const { response, request } = require('express');
 
-const port = 5500;
+const port = process.env.PORT || 5500;
 const hostname = 'localhost';
 const AtlasDbUrl = 'mongodb+srv://user_12:GjKd5OpYeJWi3oEr@cluster0.fakhrz8.mongodb.net/testing1?retryWrites=true&w=majority';
 
